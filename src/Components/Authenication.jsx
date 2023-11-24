@@ -2,12 +2,6 @@ import React, { useState } from "react";
 import "./AuthReg.css";
 import Checkbox from "@mui/material/Checkbox";
 
-// import { useAppDispatch } from "../../store";
-// import { selectLoginFormError } from "./selectors";
-// import { useNavigate } from "react-router-dom";
-// import { login, resetLoginErrorForm } from "./authSlice";
-// import { useSelector } from "react-redux";
-
 function Authenication({ setIsRegistrationModalOpened }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,7 +39,7 @@ function Authenication({ setIsRegistrationModalOpened }) {
                 <Checkbox {...label} defaultChecked />{" "}
                 <p style={{ margin: "-10px" }}>Запомнить меня</p>
               </div>
-              <p>Забыли пароль?</p>
+              <p className="forgot-password">Забыли пароль?</p>
             </div>
             <div className="btn-form">
               <button className="btn-come">Войти</button>
