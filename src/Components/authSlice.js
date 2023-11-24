@@ -11,7 +11,7 @@ export const registration = createAsyncThunk(
       throw new Error("Не все поля заполнены");
     }
     const response = await api.registerUser(data);
-    return response; // Возвращаем полученные данные
+    return response; 
   }
 );
 

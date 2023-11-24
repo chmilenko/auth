@@ -18,7 +18,7 @@ function Authenication({ setIsRegistrationModalOpened }) {
           <div className="form">
             <form>
               <div className="input-form">
-                <p>Почта</p>
+                <p className="label">Почта</p>
                 <input
                   placeholder="Введите свою почту"
                   name="email"
@@ -26,7 +26,7 @@ function Authenication({ setIsRegistrationModalOpened }) {
                 />
               </div>
               <div className="input-form">
-                <p>Пароль</p>
+                <p className="label">Пароль</p>
                 <input
                   placeholder="Введите свой пароль"
                   name="password"

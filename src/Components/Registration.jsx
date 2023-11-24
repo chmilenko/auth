@@ -39,7 +39,7 @@ function Registration({ setIsRegistrationModalOpened }) {
           <div className="form">
             <form>
               <div className="input-form">
-                <p>Почта</p>
+                <p className="label">Почта</p>
                 <input
                   placeholder="Введите свою почту"
                   name="email"
@@ -49,7 +49,7 @@ function Registration({ setIsRegistrationModalOpened }) {
                 />
               </div>
               <div className="input-form">
-                <p>Придумайте пароль</p>
+                <p className="label">Придумайте пароль</p>
                 <input
                   placeholder="Введите свой пароль"
                   name="password"
@@ -59,7 +59,7 @@ function Registration({ setIsRegistrationModalOpened }) {
                 />
               </div>
               <div className="input-form">
-                <p>Подтвердите пароль</p>
+                <p className="label">Подтвердите пароль</p>
                 <input
                   placeholder="Введите свой пароль"
                   name="repeatPassword"

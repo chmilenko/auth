@@ -17,10 +17,19 @@
 
 .come-account {
   margin-top: 2vh;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
 }
 .welcome {
   color: #667085;
   margin-top: 1vh;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.form {
+  margin-top: 32px;
 }
 .input-form {
   align-content: center;
@@ -28,15 +37,17 @@
   align-items: baseline;
   margin: 1vh;
 }
-
+.label {
+  margin-bottom: 6px;
+}
 input {
   width: 45vh;
   height: 4.7vh;
   border-radius: 1vh;
   border: 1px solid #d0d5dd;
-  color: #d0d5dd;
-  outline: none;
-  font-size: 15px;
+
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
 }
 .form-settings {
