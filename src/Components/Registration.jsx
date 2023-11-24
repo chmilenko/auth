@@ -43,7 +43,7 @@ function Registration({ setIsRegistrationModalOpened }) {
                 <input
                   placeholder="Введите свою почту"
                   name="email"
-                  type="email"
+                  type="text"
                   onChange={(event) => setEmail(event.target.value)}
                   value={email}
                 />
