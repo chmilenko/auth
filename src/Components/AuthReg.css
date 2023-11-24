@@ -5,41 +5,30 @@
   align-items: center;
   -webkit-tap-highlight-color: transparent;
 }
+.content,
+.header,
+.input-form,
+.btn-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .come-account {
   margin-top: 2vh;
-}
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .welcome {
   color: #667085;
   margin-top: 1vh;
 }
-.content,
-.btn-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .input-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   align-items: baseline;
   margin: 1vh;
 }
-.btn-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
+
 input {
   width: 45vh;
   height: 4vh;
