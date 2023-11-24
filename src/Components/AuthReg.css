@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.come-account {
+  margin-top: 2vh;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome {
+  color: #667085;
+  margin-top: 1vh;
+}
+.content,
+.btn-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 1vh;
+}
+.btn-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+input {
+  width: 45vh;
+  height: 4vh;
+  border-radius: 1vh;
+  border: 1px solid #d0d5dd;
+  color: #d0d5dd;
+}
+.form-settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remember-user {
+  display: flex;
+}
+
+button {
+  width: 45vh;
+  height: 4vh;
+  margin: 1vh;
+  border-radius: 1vh;
+  border: none;
+  outline: none;
+}
+.btn-come {
+  background-color: #4a61e7;
+  color: white;
+}
+.yandex-id {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.yandex-logo {
+  margin-right: 1vh;
+}
+.moving {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+}
+img {
+  align-items: center;
+}
+.go {
+  color: #3538cd;
+  cursor: pointer;
+}
+span {
+  color: #667085;
+}
