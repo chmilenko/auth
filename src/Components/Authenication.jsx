@@ -3,7 +3,7 @@ import "./AuthReg.css";
 import Checkbox from "@mui/material/Checkbox";
 
 function Authenication({ setIsRegistrationModalOpened }) {
-  const [email, setEmail] = useState("");
+  const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
@@ -21,8 +21,8 @@ function Authenication({ setIsRegistrationModalOpened }) {
                 <p className="label">Почта</p>
                 <input
                   placeholder="Введите свою почту"
-                  name="email"
-                  type="email"
+                  name="mail"
+                  type="mail"
                 />
               </div>
               <div className="input-form">

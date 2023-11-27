@@ -5,7 +5,7 @@ import "./AuthReg.css";
 import { registration } from "./authSlice";
 
 function Registration({ setIsRegistrationModalOpened }) {
-  const [email, setEmail] = useState("");
+  const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
 
@@ -22,7 +22,8 @@ function Registration({ setIsRegistrationModalOpened }) {
 
   const register = (event) => {
     event.preventDefault();
-    dispatch(registration({ email, password }));
+
+    dispatch(registration({ mail, password }));
   };
 
   const handleRegistration = () => {
@@ -42,10 +43,10 @@ function Registration({ setIsRegistrationModalOpened }) {
                 <p className="label">Почта</p>
                 <input
                   placeholder="Введите свою почту"
-                  name="email"
+                  name="mail"
                   type="text"
-                  onChange={(event) => setEmail(event.target.value)}
-                  value={email}
+                  onChange={(event) => setMail(event.target.value)}
+                  value={mail}
                 />
               </div>
               <div className="input-form">

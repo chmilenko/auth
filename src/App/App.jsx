@@ -31,11 +31,16 @@ export default function App() {
       <Button onClick={handleOpen}>Войти</Button>
       <Modal
         open={open}
-        onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <img
+            src="./close.svg"
+            alt="close"
+            style={{ float: "right" }}
+            onClick={handleClose}
+          />
           {isRegistrationModalOpened ? (
             <Registration
               setIsRegistrationModalOpened={setIsRegistrationModalOpened}

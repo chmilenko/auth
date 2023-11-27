@@ -4,10 +4,10 @@ import * as api from "./api";
 export const registration = createAsyncThunk(
   "auth/registration",
   async (data) => {
-    if (data.password !== data.passwordRepeat) {
-      throw new Error("Пароли не совпадают");
-    }
-    if (!data.email.trim() || !data.password.trim() || !data.passwordRepeat.trim()) {
+    // if (data.password !== data.passwordRepeat) {
+    //   throw new Error("Пароли не совпадают");
+    // }
+    if (!data.mail.trim() || !data.password.trim()) {
       throw new Error("Не все поля заполнены");
     }
     const response = await api.registerUser(data);
