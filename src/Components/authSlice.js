@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import * as api from "./api";
-
+import { setTokenInCookie } from "../Hooks/setCookie";
 export const registration = createAsyncThunk(
   "auth/registration",
   async (data) => {
@@ -11,14 +11,23 @@ export const registration = createAsyncThunk(
       throw new Error("Не все поля заполнены");
     }
     const response = await api.registerUser(data);
-    return response; 
+    return response;
   }
 );
+
+export const auth = createAsyncThunk("auth", async (data) => {
+  if (!data.mail.trim() || !data.password.trim()) {
+    throw new Error("Не все поля заполнены");
+  }
+  const response = await api.authorization(data);
+  return response;
+});
 
 const authSlice = createSlice({
   name: "auth",
   initialState: {
     user: null,
+    token: null,
     error: null,
     loading: false,
   },
@@ -37,6 +46,20 @@ const authSlice = createSlice({
       .addCase(registration.rejected, (state, action) => {
         state.error = action.error.message;
         state.loading = false;
+      })
+      .addCase(auth.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(auth.fulfilled, (state, action) => {
+        state.user = action.payload;
+        setTokenInCookie(action.payload.token)
+        state.error = null;
+        state.loading = false;
+      })
+      .addCase(auth.rejected, (state, action) => {
+        state.error = null;
+        state.loading = true;
       });
   },
 });

@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AuthReg.css";
 import Checkbox from "@mui/material/Checkbox";
-
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { getTokenFromCookie } from "../Hooks/setCookie";
 function Authenication({ setIsRegistrationModalOpened }) {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
+
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+  const token = getTokenFromCookie();
+  useEffect(() => {
+    if (token) {
+      navigate("http://kotomatrix.ru/show/850480/");
+    }
+  }, [navigate, token]);
+
+  const authorization = (event) => {
+    event.preventDefault();
+    dispatch(authorization({ mail, password }));
+  };
+
   return (
-    <form className="form-add-product">
+    <form className="form-add-product" onSubmit={authorization}>
       <div className="content">
         <div className="header">
           <img alt="icon" src="./logo.svg" />
@@ -23,6 +41,8 @@ function Authenication({ setIsRegistrationModalOpened }) {
                   placeholder="Введите свою почту"
                   name="mail"
                   type="mail"
+                  value={mail}
+                  onChange={setMail((event) => event.target.value)}
                 />
               </div>
               <div className="input-form">
@@ -31,6 +51,8 @@ function Authenication({ setIsRegistrationModalOpened }) {
                   placeholder="Введите свой пароль"
                   name="password"
                   type="password"
+                  value={password}
+                  onChange={setPassword((event) => event.target.value)}
                 />
               </div>
             </form>
@@ -42,7 +64,9 @@ function Authenication({ setIsRegistrationModalOpened }) {
               <p className="forgot-password">Забыли пароль?</p>
             </div>
             <div className="btn-form">
-              <button className="btn-come">Войти</button>
+              <button className="btn-come" type="submit">
+                Войти
+              </button>
               <button className="yandex-id">
                 <img src="./yandex.svg" alt="yandex" className="yandex-logo" />
                 Яндекс ID
