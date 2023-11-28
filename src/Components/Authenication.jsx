@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./AuthReg.css";
 import Checkbox from "@mui/material/Checkbox";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getTokenFromCookie } from "../Hooks/setCookie";
 function Authenication({ setIsRegistrationModalOpened }) {
@@ -42,7 +42,7 @@ function Authenication({ setIsRegistrationModalOpened }) {
                   name="mail"
                   type="mail"
                   value={mail}
-                  onChange={setMail((event) => event.target.value)}
+                  onChange={(event) => setMail(event.target.value)}
                 />
               </div>
               <div className="input-form">
@@ -52,7 +52,7 @@ function Authenication({ setIsRegistrationModalOpened }) {
                   name="password"
                   type="password"
                   value={password}
-                  onChange={setPassword((event) => event.target.value)}
+                  onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
             </form>
