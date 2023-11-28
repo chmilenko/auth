@@ -4,6 +4,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getTokenFromCookie } from "../Hooks/setCookie";
+
 function Authenication({ setIsRegistrationModalOpened }) {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");

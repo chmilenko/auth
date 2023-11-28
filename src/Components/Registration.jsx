@@ -22,7 +22,6 @@ function Registration({ setIsRegistrationModalOpened }) {
 
   const register = (event) => {
     event.preventDefault();
-
     dispatch(registration({ mail, password }));
   };
 

@@ -6,6 +6,7 @@ import Modal from "@mui/material/Modal";
 import Authenication from "../Components/Authenication";
 import Registration from "../Components/Registration";
 
+
 const style = {
   position: "absolute",
   top: "50%",

@@ -4,7 +4,9 @@
   box-sizing: border-box;
   align-items: center;
   -webkit-tap-highlight-color: transparent;
+  font-family: "Inter";
 }
+
 .content,
 .header,
 .input-form,
@@ -19,9 +21,8 @@
 .come-account {
   margin-top: 2vh;
   font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
 }
+
 .welcome {
   color: #667085;
   margin-top: 1vh;
@@ -39,14 +40,16 @@
   margin: 1vh;
 }
 .label {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-700, #344054);
 }
 input {
   width: 45vh;
   height: 4.7vh;
   border-radius: 1vh;
   border: 1px solid #d0d5dd;
-
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -59,6 +62,10 @@ input {
 .forgot-password {
   color: #3538cd;
   cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
 }
 .remember-user {
   display: flex;
@@ -72,6 +79,7 @@ button {
   border: none;
   outline: none;
   font-weight: 600;
+  font-size: 1.7167381974248928vh;
 }
 .btn-come {
   background-color: #4a61e7;
@@ -99,7 +107,15 @@ img {
 .go {
   color: #3538cd;
   cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
 }
 span {
   color: #667085;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
