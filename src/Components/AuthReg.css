@@ -44,6 +44,7 @@
   font-size: 14px;
   line-height: 20px;
   color: var(--gray-700, #344054);
+  font-weight: 500;
 }
 input {
   width: 45vh;
@@ -53,6 +54,7 @@ input {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  padding: 10px 14px;
 }
 .form-settings {
   display: flex;
